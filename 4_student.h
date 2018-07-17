@@ -16,4 +16,8 @@ bool compare(const Student_info&, const Student_info&);
 std::istream& read(std::istream&, Student_info&);
 std::istream& read_homework(std::istream&, std::vector<double>&);
 
+// added in chapter 6
+bool did_all_hw(const Student_info&);
+void open_class(std::string, std::vector<Student_info>&);
+
 #endif
