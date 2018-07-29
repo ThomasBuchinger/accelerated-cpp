@@ -20,16 +20,16 @@ bool not_space(char c) {
 }
 
 // split a string on whitepaces
-vector<string> split(const string& str) {
+vector<string> split(const string& s) {
     typedef string::const_iterator iter;
     vector<string> ret;
 
-    iter i = str.begin();
-    while (i != str.end()) {
-        i = find_if(i, str.end(), not_space);
-        iter j = find_if(i, str.end(), space);
+    iter i = s.begin();
+    while (i != s.end()) {
+        i = find_if(i, s.end(), not_space);
+        iter j = find_if(i, s.end(), space);
 
-        if (i != str.end())
+        if (i != s.end())
             ret.push_back(string(i, j));
         i = j;
     }
@@ -37,8 +37,8 @@ vector<string> split(const string& str) {
 }
 
 // check if a given string is a palindrom
-bool is_palindrom(const string& str) {
-    return equal(str.begin(), str.end(), str.rbegin());
+bool is_palindrom(const string& s) {
+    return equal(s.begin(), s.end(), s.rbegin());
 }
 
 vector<string> find_urls(const string& s) {
@@ -97,39 +97,3 @@ string::const_iterator url_begin(string::const_iterator b, string::const_iterato
     return e;
 }
 
-
-
-
-// Main method
-int main() {
-    // string split function
-    string split_test = "a b    c    def  ghijklm op q  srt uvw xyz";
-    typedef vector<string>::const_iterator vec_iter;
-    vector<string> splitted = split(split_test);
-    for (vec_iter i = splitted.begin(); i != splitted.end(); ++i){
-        cout << "split(): " << *i << endl;
-    }
-
-    // Check for palindroms
-    vector<string> palindroms;
-    palindroms.push_back( "iamnot a palindrom");
-    palindroms.push_back("eye");
-    palindroms.push_back( "doctor");
-    palindroms.push_back( "regallager");
-    string message;
-    for (vec_iter i = palindroms.begin(); i != palindroms.end(); ++i){
-        is_palindrom(*i) ? message = " yes" : message = " no";
-        cout << "palindroms(): " << *i << message << endl;
-    }
-
-    // URL finder
-    string text = ":// This a a url http://google.at but this is not ://, however ftp://kernel.org is cool anyway and stuff ://";
-    vector<string> urls = find_urls(text);
-    for (vec_iter i = urls.begin(); i != urls.end(); ++i){
-        cout << "urls(): " << *i << endl;
-    }
-
-
-
-    return 0;
-}
