@@ -2,10 +2,10 @@
 #include <stdexcept>
 #include <numeric>
 #include <vector>
-#include "4_student.h"
-#include "4_grades.h"
-#include "4_median.h"
-#include "6_analysis_algorithm.h"
+#include "../chapter4/student.h"
+#include "../chapter4/grades.h"
+#include "../chapter4/median.h"
+#include "analysis_algorithm.h"
 
 using std::vector;
 using std::domain_error;

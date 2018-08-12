@@ -5,9 +5,9 @@
 #include <stdexcept>
 #include <numeric>
 #include <vector>
-#include "4_student.h"
-#include "4_grades.h"
-#include "4_median.h"
+#include "../chapter4/student.h"
+#include "../chapter4/grades.h"
+#include "../chapter4/median.h"
 
 double grade_aux(const Student_info&);
 double median_analysis(const std::vector<Student_info>&);

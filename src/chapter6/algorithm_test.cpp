@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include "6_more_algorithms.h"
+#include "more_algorithms.h"
 
 
 using std::vector;
@@ -39,8 +39,6 @@ int main() {
     for (vec_iter i = urls.begin(); i != urls.end(); ++i){
         cout << "urls(): " << *i << endl;
     }
-
-
 
     return 0;
 }

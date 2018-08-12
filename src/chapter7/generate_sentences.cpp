@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include <map>
 #include <ctime>
-#include "6_more_algorithms.h"
+#include "../chapter6/more_algorithms.h"
 
 using std::string;
 using std::cout;

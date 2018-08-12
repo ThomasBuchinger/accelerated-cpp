@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "11_vec.h"
+#include "vec.h"
 
 using std::cout;
 using std::endl;

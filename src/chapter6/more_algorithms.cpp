@@ -3,7 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
-#include "6_more_algorithms.h"
+#include "more_algorithms.h"
 
 
 using std::vector;

@@ -85,6 +85,10 @@ int main() {
     find_all(numbers.begin(), numbers.end(), fib, is_fibonacci);
     print("Fibonacci Numbers", fib.begin(), fib.end());
 
+    vector<int> perfect_square(0);
+    find_all(numbers.begin(), numbers.end(), perfect_square, is_perfect_square);
+    print("Perfect Squares", perfect_square.begin(), perfect_square.end());
+
     vector<int> primes(0);
     find_all(numbers.begin(), numbers.end(), primes, is_prime);
     print("Primes", primes.begin(), primes.end());

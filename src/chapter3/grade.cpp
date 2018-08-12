@@ -49,7 +49,7 @@ int main() {
 
     streamsize prec = cout.precision();
     cout << "Your final grade is " << setprecision(3)
-         << 0.2 * midterm_grade + 0.4 * final_grade + 0.4 * median
+         << (0.2 * midterm_grade) + (0.4 * final_grade) + (0.4 * median)
          << setprecision(prec) << endl;
 
     return 0;

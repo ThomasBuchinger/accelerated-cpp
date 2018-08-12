@@ -1,8 +1,8 @@
 #include <stdexcept>
 #include <vector>
-#include "4_grades.h"
-#include "4_student.h"
-#include "4_median.h"
+#include "grades.h"
+#include "student.h"
+#include "median.h"
 
 using std::domain_error;
 using std::vector;

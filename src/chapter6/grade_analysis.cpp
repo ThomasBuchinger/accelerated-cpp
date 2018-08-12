@@ -3,10 +3,10 @@
 #include <string>
 #include <algorithm>
 #include <stdexcept>
-#include "4_student.h"
-#include "4_grades.h"
-#include "4_median.h"
-#include "6_analysis_algorithm.h"
+#include "../chapter4/student.h"
+#include "../chapter4/grades.h"
+#include "../chapter4/median.h"
+#include "analysis_algorithm.h"
 
 using std::istream;
 using std::ostream;
@@ -31,11 +31,11 @@ void write_analysis(ostream& out,
 int main() {
     vector<Student_info> students;
     open_class("class.txt", students);
-    typedef vector<Student_info>::const_iterator iter;
 
 
     /* There is a better way to seperate the students!
      *  
+    typedef vector<Student_info>::const_iterator iter;
     vector<Student_info> did;
     vector<Student_info> didnt;    
     for (iter i = students.begin(); i != students.end(); ++i) {

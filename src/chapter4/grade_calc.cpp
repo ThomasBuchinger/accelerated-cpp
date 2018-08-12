@@ -5,8 +5,8 @@
 #include <stdexcept>
 #include <string>
 #include <vector>
-#include "4_grades.h"
-#include "4_student.h"
+#include "grades.h"
+#include "student.h"
 
 using std::cout;
 using std::cin;
