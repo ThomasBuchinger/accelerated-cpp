@@ -11,20 +11,20 @@ CFLAGS  = -Wall -g
 CC      = g++ ${CFLAGS}
 LDFLAGS = 
 
-.PHONY: clean cleandeps cleanall
+.PHONY: clean cleandeps cleanall prep
 
 all: chapter0 chapter1 chapter2 chapter3 chapter4 chapter6 chapter7 chapter10 chapter11 chapter12 chapter13 chapter14 chapter15
 
-chapter0: hello_world
-chapter1: working_with_strings
-chapter2: my_framing_program framing_program
-chapter3: simple_grade
-chapter4: grading_program 
-chapter6: example_algorithms grading_comparison
-chapter7: word_count gen_sentences find_xref
-chapter10: example_array example_echo example_function_pointer example_letter_grades example_memory example_predicate example_pointer
-chapter11: example_vec
-chapter12: example_str
+chapter0: prep hello_world
+chapter1: prep working_with_strings
+chapter2: prep my_framing_program framing_program
+chapter3: prep simple_grade
+chapter4: prep grading_program 
+chapter6: prep example_algorithms grading_comparison
+chapter7: prep word_count gen_sentences find_xref
+chapter10: prep example_array example_echo example_function_pointer example_letter_grades example_memory example_predicate example_pointer
+chapter11: prep example_vec
+chapter12: prep example_str
 chapter13:
 chapter14:
 chapter15:
@@ -98,7 +98,14 @@ example_str: src/chapter12/main.cpp src/chapter12/str.h src/chapter11/vec.h
 
 
 
+prep:
+	-mkdir -p bin .build src
 
+install:
+	@echo "There is nothing worth installing"
+
+uninstall:
+	@echo "Since nothing got installed, there is no point in uninstalling..."
 
 -include $(DEPS) 
 
