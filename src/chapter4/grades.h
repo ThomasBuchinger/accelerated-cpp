@@ -2,6 +2,7 @@
 #define GUARD_grades_h
 
 #include <vector>
+#include "median.h"
 #include "student.h"
 
 double grade(double, double, double);

@@ -25,7 +25,7 @@ chapter7: prep word_count gen_sentences find_xref
 chapter10: prep example_array example_echo example_function_pointer example_letter_grades example_memory example_predicate example_pointer
 chapter11: prep example_vec
 chapter12: prep example_str
-chapter13:
+chapter13: prep university_grading
 chapter14:
 chapter15:
 
@@ -89,7 +89,8 @@ example_vec: src/chapter11/main.cpp src/chapter11/vec.h
 example_str: src/chapter12/main.cpp src/chapter12/str.h src/chapter11/vec.h
 	$(CC) $? -o $(BIN)/$@
 
-
+university_grading: src/chapter13/main.cpp src/chapter13/student.o src/chapter13/core.cpp src/chapter13/grad.o src/chapter4/grades.o src/chapter4/median.o
+	$(CC) $? -o $(BIN)/$@
 
 
 
